@@ -24,7 +24,7 @@ public class TracingAwareHttpRequestEncoder extends HttpRequestEncoder {
 
     if (isForwardProxyTransparent()) {
       // W3C Trace Context
-      headers.remove(TraceUtils.HEADER_VGS_TRACEPARENT);
+      headers.remove(TraceUtils.HEADER_TRACEPARENT);
 
       // B3 Tracing - we don't use these anymore but during the migration we are going to keep both
       headers.remove(TraceUtils.HEADER_X_B3_TRACEID);
